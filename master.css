@@ -1,0 +1,256 @@
+:root {
+    --main-padding: 20px;
+    --main-color: #2196f3;
+    --main-green: #009688;
+    --main-transition: 0.3s;
+    --main-radius: 10px;
+}
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: var(--main-radius);
+    margin: 20px auto;
+    background-color: #f8f8f8;
+    padding: var(--main-padding);
+    width: 750px;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .app {
+        width: 100%;
+    }
+}
+.choose-ctgr {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+.choose-ctgr .ctgrs {
+    padding: 20px 0 4px;
+}
+.choose-ctgr .ctgrs label {
+    width: 100%;
+}
+.choose-ctgr .ctgrs input {
+    display: none;
+}
+.choose-ctgr .ctgrs input + div {
+    color: black;
+    background-color: #bbdefb;
+    padding: 10px;
+    margin: auto;
+    transition: var(--main-transition);
+    cursor: pointer;
+    border-radius: var(--main-radius);
+    width: 80%;
+    font-size: 18px;
+    transition: var(--main-transition);
+}
+.choose-ctgr .ctgrs input + div:hover {
+    background-color: #a3d3fa;
+}
+.choose-ctgr .ctgrs input:not(:last-child) + div {
+    margin-bottom: 5px;
+}
+.choose-ctgr .ctgrs input:checked + div {
+    background-color: var(--main-color);
+    color: white;
+}
+.choose-ctgr .start {
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    background-color: var(--main-green);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 0 0 30px 30px;
+    letter-spacing: 1px;
+    transition: var(--main-transition);
+}
+.choose-ctgr .start:hover {
+    background-color: #00897b;
+}
+.content {
+    position: relative;
+    left: -200%;
+    transition: var(--main-transition);
+}
+.info, .more-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: var(--main-padding);
+    box-shadow: 0 0 2px 3px #f3f3f3;
+    border-radius: var(--main-radius);
+}
+form {
+    margin: 20px 0;
+    box-shadow: 0 0 2px 3px #f3f3f3;
+    border-radius: var(--main-radius);
+    overflow: hidden;
+}
+.question {
+    background-color: #fff;
+    padding: var(--main-padding);
+}
+.question h2 {
+    margin-bottom: 20px;
+}
+.question .answers {
+    background-color: #f9f9f9;
+    border-radius: 0 var(--main-radius);
+}
+.question .answers .answer {
+    font-weight: bold;
+    font-size: 14px;
+    color: #777;
+    border-radius: var(--main-radius);
+    overflow: hidden;
+}
+.question .answers .answer:not(:last-of-type) {
+    border-bottom: 1px solid #bdbdbd;
+}
+.question .answers .answer input {
+    cursor: pointer;
+    display: none;
+}
+.question .answers .answer label {
+    display: block;
+    padding: 15px;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.question .answers .answer input:checked + label {
+    color: var(--main-color);
+}
+.question .answers .answer input:not(:checked) + label:hover {
+    color: #436079;
+}
+.question .answers .answer input.right + label {
+    background-color: var(--main-green);
+    color: white;
+}
+.question .answers .answer input.wrong + label {
+    background-color: rgb(182, 8, 8);
+    color: white;
+}
+input[type="submit"] {
+    width: 100%;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: var(--main-radius);
+    transition: var(--main-transition);
+}
+input[type="submit"]:hover {
+    background-color: #1e88e5;
+}
+input[type="submit"]:focus {
+    outline: none;
+}
+.more-info .bullets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.more-info .bullets span {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    transition: var(--main-transition);
+}
+.on {
+    animation: infinite on 0.5s alternate;
+}
+.more-info .bullets span.right {
+    animation: right 1s forwards;
+}
+.more-info .bullets span.wrong {
+    animation: wrong 1s forwards;
+}
+@keyframes on {
+    100% {
+        background-color: #0075ff;
+    }
+}
+@keyframes right {
+    100% {
+        background-color: var(--main-green);
+    }
+}
+@keyframes wrong {
+    100% {
+        background-color: #e91e1e;
+    }
+}
+.more-info .time {
+    width: 150px;
+    text-align: right;
+}
+.finish {
+    text-align: center;
+    padding-bottom: 20px;
+    display: none;
+    font-weight: bold;
+}
+.result {
+    opacity: 0;
+}
+.result.apear {
+    animation: apear 1s forwards;
+}
+@keyframes apear {
+    100% {
+        opacity: 1;
+        padding: 40px;
+    }
+}
+.finish .rank {
+    font-size: 65px;
+    padding-bottom: 10px;
+}
+.finish .rank.passed {
+    color: var(--main-green);
+}
+.finish .rank.failed {
+    color: #e91e1e;
+}
+.finish span {
+    color: var(--main-color);
+}
+.again {
+    display: block;
+    border: none;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: var(--main-radius);
+    cursor: pointer;
+    transition: var(--main-transition);
+    width: 100%;
+}
+.again:hover {
+    background-color: #1e88e5;
+}

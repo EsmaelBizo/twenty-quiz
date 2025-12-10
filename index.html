@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <title>Front Fourteen</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="choose-ctgr">
+            <h2>Choose The Language</h2>
+            <div class="ctgrs"></div>
+            <button class="start">Start</button>
+        </div>
+        <div class="content">
+            <div class="info">
+                <div class="category">Category: <span></span></div>
+                <div class="quiz-num">Questions Number: <span></span></div>
+            </div>
+            <form>
+                <div class="question">
+                    <h2></h2>
+                    <div class="answers"></div>
+                </div>
+                <input type="submit" value="Submit Answer">
+            </form>
+            <div class="finish">
+                <div class="result">
+                    <div class="rank"></div>
+                    You Answered <span class="r-ans"></span> From <span class="all-ans"></span>
+                </div>
+                <a class="again" href="index.html">Again</a>
+            </div>
+            <div class="more-info">
+                <div class="bullets">
+                </div>
+                <div class="time"><span class="min"></span>:<span class="sec"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="audios">
+        <audio src="audios/slide.mp3" class="slide-audio"></audio>
+        <audio src="audios/right.mp3" class="right-audio"></audio>
+        <audio src="audios/wrong.mp3" class="wrong-audio"></audio>
+        <audio src="audios/tada.mp3" class="tada-audio"></audio>
+        <audio src="audios/fail.mp3" class="fail-audio"></audio>
+        <audio src="audios/countdown.wav" class="countdown-audio"></audio>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+[
+    { "title": "What Does console.log() Do?", "answer_1": "Prints Text to Console", "answer_2": "Creates a Popup", "answer_3": "Deletes a Variable", "answer_4": "Restarts Browser", "correct_ans": "Prints Text to Console" },
+
+    { "title": "What Is typeof Used For?", "answer_1": "Change Data Type", "answer_2": "Check Data Type", "answer_3": "Format String", "answer_4": "Loop Array", "correct_ans": "Check Data Type" },
+
+    { "title": "What Does parseInt() Do?", "answer_1": "Converts String to Integer", "answer_2": "Converts Integer to String", "answer_3": "Rounds Number", "answer_4": "Breaks Code", "correct_ans": "Converts String to Integer" },
+
+    { "title": "What Does isNaN() Check?", "answer_1": "Is Value Zero", "answer_2": "Is Value Infinite", "answer_3": "Is Not a Number", "answer_4": "Is Boolean", "correct_ans": "Is Not a Number" },
+
+    { "title": "What Does Array.push() Do?", "answer_1": "Remove Last Item", "answer_2": "Add Item at End", "answer_3": "Sort Array", "answer_4": "Reverse Array", "correct_ans": "Add Item at End" },
+
+    { "title": "What Does Array.pop() Do?", "answer_1": "Add New Item", "answer_2": "Remove Last Item", "answer_3": "Remove First Item", "answer_4": "Copy Array", "correct_ans": "Remove Last Item" },
+
+    { "title": "What Does Array.shift() Do?", "answer_1": "Remove First Item", "answer_2": "Add First Item", "answer_3": "Add Last Item", "answer_4": "Clone Array", "correct_ans": "Remove First Item" },
+
+    { "title": "What Does Array.unshift() Do?", "answer_1": "Add Item to Beginning", "answer_2": "Add Item to End", "answer_3": "Remove Item", "answer_4": "Sort Array", "correct_ans": "Add Item to Beginning" },
+
+    { "title": "What Does Array.map() Return?", "answer_1": "Filtered Items", "answer_2": "New Array", "answer_3": "Sum of Items", "answer_4": "Sorted Array", "correct_ans": "New Array" },
+
+    { "title": "What Does Array.filter() Do?", "answer_1": "Loop Array", "answer_2": "Remove Duplicates", "answer_3": "Return Matching Items", "answer_4": "Convert to String", "correct_ans": "Return Matching Items" },
+
+    { "title": "What Does Array.reduce() Do?", "answer_1": "Reduce Array Size", "answer_2": "Convert Array to One Value", "answer_3": "Copy Array", "answer_4": "Sort Array", "correct_ans": "Convert Array to One Value" },
+
+    { "title": "What Does document.getElementById() Do?", "answer_1": "Select Element by Class", "answer_2": "Select Element by Tag", "answer_3": "Select Element by ID", "answer_4": "Delete Element", "correct_ans": "Select Element by ID" },
+
+    { "title": "What Does querySelector() Do?", "answer_1": "Select First Matching Element", "answer_2": "Select All Elements", "answer_3": "Create Element", "answer_4": "Clone Node", "correct_ans": "Select First Matching Element" },
+
+    { "title": "What Does addEventListener() Do?", "answer_1": "Adds CSS Style", "answer_2": "Listens to Events", "answer_3": "Deletes Event", "answer_4": "Fetch Data", "correct_ans": "Listens to Events" },
+
+    { "title": "What Does setTimeout() Do?", "answer_1": "Repeats Function Forever", "answer_2": "Wait Then Run Function", "answer_3": "Stops Execution", "answer_4": "Loops Array", "correct_ans": "Wait Then Run Function" },
+
+    { "title": "What Does setInterval() Do?", "answer_1": "Run Function Once", "answer_2": "Run Function Repeatedly", "answer_3": "Stop Function", "answer_4": "Pause Code", "correct_ans": "Run Function Repeatedly" },
+
+    { "title": "What Does clearInterval() Do?", "answer_1": "Delete Variable", "answer_2": "Stop Interval", "answer_3": "Pause setTimeout", "answer_4": "Reset Browser", "correct_ans": "Stop Interval" },
+
+    { "title": "What Does fetch() Do?", "answer_1": "Create File", "answer_2": "Fetch Data from URL", "answer_3": "Encrypt Data", "answer_4": "Delete Cookies", "correct_ans": "Fetch Data from URL" },
+
+    { "title": "What Does JSON.stringify() Do?", "answer_1": "Parse JSON", "answer_2": "Convert Object to JSON String", "answer_3": "Validate JSON", "answer_4": "Copy Object", "correct_ans": "Convert Object to JSON String" },
+
+    { "title": "What Does JSON.parse() Do?", "answer_1": "Pretty Print JSON", "answer_2": "Format JSON", "answer_3": "Convert JSON String to Object", "answer_4": "Encrypt JSON", "correct_ans": "Convert JSON String to Object" },
+
+    { "title": "What Is let Used For?", "answer_1": "Global Constant", "answer_2": "Block-Scoped Variable", "answer_3": "Function Declaration", "answer_4": "Loop Breaker", "correct_ans": "Block-Scoped Variable" },
+
+    { "title": "What Is const Used For?", "answer_1": "Reusable Variable", "answer_2": "Unchangeable Value", "answer_3": "Loop Counter", "answer_4": "Class Creator", "correct_ans": "Unchangeable Value" },
+
+    { "title": "What Is var?", "answer_1": "Block Scoped Variable", "answer_2": "Function Scoped Variable", "answer_3": "Constant", "answer_4": "Event Listener", "correct_ans": "Function Scoped Variable" },
+
+    { "title": "What Does === Check?", "answer_1": "Value Only", "answer_2": "Type Only", "answer_3": "Value and Type", "answer_4": "Reference Only", "correct_ans": "Value and Type" },
+
+    { "title": "What Does == Check?", "answer_1": "Exact Types", "answer_2": "Loose Equality", "answer_3": "Length Only", "answer_4": "Memory Address", "correct_ans": "Loose Equality" },
+
+    { "title": "What Are Arrow Functions?", "answer_1": "Special CSS Rule", "answer_2": "Short Function Syntax", "answer_3": "Database Query", "answer_4": "New HTML Tag", "correct_ans": "Short Function Syntax" },
+
+    { "title": "What Is a Callback Function?", "answer_1": "Function Without Name", "answer_2": "Function Passed as Argument", "answer_3": "Function That Returns Object", "answer_4": "Function That Creates Element", "correct_ans": "Function Passed as Argument" },
+
+    { "title": "What Does return Do?", "answer_1": "Stop Function and Send Value", "answer_2": "Restart Code", "answer_3": "Refresh Page", "answer_4": "Create Array", "correct_ans": "Stop Function and Send Value" },
+
+    { "title": "What Is NaN?", "answer_1": "Not a Number", "answer_2": "Negative Number", "answer_3": "New Array Name", "answer_4": "Null Value", "correct_ans": "Not a Number" },
+
+    { "title": "What Does Math.random() Return?", "answer_1": "0 to Infinity", "answer_2": "0 to 1", "answer_3": "1 to 10", "answer_4": "0 to 100", "correct_ans": "0 to 1" },
+
+    { "title": "What Does Math.floor() Do?", "answer_1": "Round Up", "answer_2": "Round Down", "answer_3": "Generate Random", "answer_4": "Convert to String", "correct_ans": "Round Down" },
+
+    { "title": "What Does Math.ceil() Do?", "answer_1": "Round Up", "answer_2": "Round Down", "answer_3": "Average Numbers", "answer_4": "Convert to Float", "correct_ans": "Round Up" },
+
+    { "title": "What Does try...catch Handle?", "answer_1": "Loops", "answer_2": "Errors", "answer_3": "HTML Content", "answer_4": "CSS Styles", "correct_ans": "Errors" },
+
+    { "title": "What Is a Promise?", "answer_1": "Database Connection", "answer_2": "Object Representing Future Value", "answer_3": "Class Template", "answer_4": "HTML Element", "correct_ans": "Object Representing Future Value" },
+
+    { "title": "What Does async Keyword Do?", "answer_1": "Make Function Synchronous", "answer_2": "Make Function Return Promise", "answer_3": "Stop Function", "answer_4": "Loop Array", "correct_ans": "Make Function Return Promise" },
+
+    { "title": "What Does await Do?", "answer_1": "Wait for Promise", "answer_2": "Repeat Function", "answer_3": "Stop Interval", "answer_4": "Delay Timeout", "correct_ans": "Wait for Promise" },
+
+    { "title": "What Is localStorage Used For?", "answer_1": "Temporary Storage", "answer_2": "Permanent Browser Storage", "answer_3": "Server Database", "answer_4": "Cookies Only", "correct_ans": "Permanent Browser Storage" },
+
+    { "title": "What Is sessionStorage Used For?", "answer_1": "Long-term Storage", "answer_2": "Tab-Based Storage", "answer_3": "File System", "answer_4": "RAM Only", "correct_ans": "Tab-Based Storage" },
+
+    { "title": "What Does new Date() Return?", "answer_1": "Current Date Object", "answer_2": "Only Year", "answer_3": "Only Month", "answer_4": "Only Time", "correct_ans": "Current Date Object" },
+
+    { "title": "What Does length Property Represent?", "answer_1": "Memory Size", "answer_2": "Number of Items", "answer_3": "Browser Width", "answer_4": "CPU Usage", "correct_ans": "Number of Items" },
+
+    { "title": "What Is a Class in JS?", "answer_1": "CSS Style", "answer_2": "Blueprint for Objects", "answer_3": "HTML Selector", "answer_4": "Database Row", "correct_ans": "Blueprint for Objects" },
+
+    { "title": "What Is this Keyword?", "answer_1": "Defines Function", "answer_2": "Refers to Current Context", "answer_3": "Loops Object", "answer_4": "Creates Array", "correct_ans": "Refers to Current Context" },
+
+    { "title": "What Does break Do in Loops?", "answer_1": "Skip Iteration", "answer_2": "Stop Loop", "answer_3": "Restart Loop", "answer_4": "Copy Loop", "correct_ans": "Stop Loop" },
+
+    { "title": "What Does continue Do?", "answer_1": "Stop Loop", "answer_2": "Skip Iteration", "answer_3": "Delete Loop", "answer_4": "Add New Iteration", "correct_ans": "Skip Iteration" },
+
+    { "title": "What Is a Template Literal?", "answer_1": "String With Backticks", "answer_2": "CSS Template", "answer_3": "Database Query", "answer_4": "Function Name", "correct_ans": "String With Backticks" },
+
+    { "title": "What Is a Spread Operator?", "answer_1": "Operator for Math", "answer_2": "Expands Arrays/Objects", "answer_3": "Creates Loop", "answer_4": "Sorts Array", "correct_ans": "Expands Arrays/Objects" },
+
+    { "title": "What Does includes() Do?", "answer_1": "Sort Array", "answer_2": "Check If Value Exists", "answer_3": "Copy Array", "answer_4": "Remove Item", "correct_ans": "Check If Value Exists" },
+
+    { "title": "What Does trim() Do?", "answer_1": "Add Spaces", "answer_2": "Remove Spaces", "answer_3": "Reverse String", "answer_4": "Uppercase Text", "correct_ans": "Remove Spaces" },
+
+    { "title": "What Does toUpperCase() Do?", "answer_1": "Lowercase Text", "answer_2": "Uppercase Text", "answer_3": "Reverse Text", "answer_4": "Trim Text", "correct_ans": "Uppercase Text" },
+
+    { "title": "What Does toLowerCase() Do?", "answer_1": "Uppercase Text", "answer_2": "Lowercase Text", "answer_3": "Reverse Text", "answer_4": "Count Characters", "correct_ans": "Lowercase Text" }
+]
