@@ -1,0 +1,258 @@
+[
+  {
+    "title": "إن ناتج تعليمة ROR بمقدار خانتين والعدد هو 10110011",
+    "answer_1": "Cf=0 && number : 11101100",
+    "answer_2": "Cf=1 && number : 11101100",
+    "answer_3": "Cf=0 && number : 11011001",
+    "answer_4": "Cf=1 && number : 11011001",
+    "correct_ans": "Cf=0 && number : 11011001"
+  },
+  {
+    "title": "تعليمة TEST تكافئ:",
+    "answer_1": "AND",
+    "answer_2": "OR",
+    "answer_3": "XOR",
+    "answer_4": "NOT",
+    "correct_ans": "AND"
+  },
+  {
+    "title": "تعليمة CMP تنجز عمل:",
+    "answer_1": "DIV",
+    "answer_2": "SUB",
+    "answer_3": "ADD",
+    "answer_4": "MUL",
+    "correct_ans": "SUB"
+  },
+  {
+    "title": "في تعليمة CMP AX,BX إذا كان BX أكبر من AX تكون أعلام الحالة:",
+    "answer_1": "CF=0 && ZF=0",
+    "answer_2": "CF=1 && ZF=1",
+    "answer_3": "CF=1 && ZF=0",
+    "answer_4": "CF=0 && ZF=1",
+    "correct_ans": "CF=1 && ZF=0"
+  },
+  {
+    "title": "إذا كان CS=1B6Ch و IP=10 ما العنوان الفيزيائي؟",
+    "answer_1": "1B6C0",
+    "answer_2": "1B6D0",
+    "answer_3": "1B7C",
+    "answer_4": "1B6C",
+    "correct_ans": "1B6C0"
+  },
+  {
+    "title": "إذا كان CS=1B6Ch و IP=10 ما العنوان المنطقي؟",
+    "answer_1": "1B6C:10",
+    "answer_2": "1B6D:10",
+    "answer_3": "10:1B6D",
+    "answer_4": "10:1B6C",
+    "correct_ans": "1B6C:10"
+  },
+  {
+    "title": "تعليمة MOV [10H],[100H] صحيحة أم خاطئة؟",
+    "answer_1": "صحيحة",
+    "answer_2": "خاطئة",
+    "answer_3": "—",
+    "answer_4": "—",
+    "correct_ans": "خاطئة"
+  },
+  {
+    "title": "تعليمة MOV DS,5H صحيحة أم خاطئة؟",
+    "answer_1": "صحيحة",
+    "answer_2": "خاطئة",
+    "answer_3": "—",
+    "answer_4": "—",
+    "correct_ans": "خاطئة"
+  },
+  {
+    "title": "تعليمة XCHG AX,BX تنقل قيمة BX إلى AX",
+    "answer_1": "صحيحة",
+    "answer_2": "خاطئة",
+    "answer_3": "—",
+    "answer_4": "—",
+    "correct_ans": "صحيحة"
+  },
+  {
+    "title": "تعليمة LEA BX,I تنقل محتوى المتغير I إلى BX",
+    "answer_1": "صحيحة",
+    "answer_2": "خاطئة",
+    "answer_3": "—",
+    "answer_4": "—",
+    "correct_ans": "خاطئة"
+  },
+  {
+    "title": "تعليمة LAHF تؤثر على أعلام الحالة",
+    "answer_1": "نعم",
+    "answer_2": "لا",
+    "answer_3": "—",
+    "answer_4": "—",
+    "correct_ans": "لا"
+  },
+  {
+    "title": "عدد عناصر المصفوفة ARRAY1 DB 8 DUP(1,2,3) هو:",
+    "answer_1": "32",
+    "answer_2": "64",
+    "answer_3": "24",
+    "answer_4": "8",
+    "correct_ans": "24"
+  },
+  {
+    "title": "كم حجرة ذاكرية تحتاج ARRAY2 DW 1,2,3:",
+    "answer_1": "6",
+    "answer_2": "3",
+    "answer_3": "4",
+    "answer_4": "8",
+    "correct_ans": "6"
+  },
+  {
+    "title": "نتيجة MOV AL, [ARRAY3 + 1] للمصفوفة ARRAY3 DB 1,2,3:",
+    "answer_1": "AL=ARRAY[3]",
+    "answer_2": "AL=ARRAY[0]",
+    "answer_3": "AL=ARRAY[2]",
+    "answer_4": "AL=ARRAY[1]",
+    "correct_ans": "AL=ARRAY[1]"
+  },
+  {
+    "title": "الأطراف AD0-AD15 تمثل:",
+    "answer_1": "مقاطعة",
+    "answer_2": "محول تشابهي رقمي",
+    "answer_3": "ممر تحكم",
+    "answer_4": "ممر معطيات وعناوين",
+    "correct_ans": "ممر معطيات وعناوين"
+  },
+  {
+    "title": "تعليمة JZ:",
+    "answer_1": "تقفز عند ZF=1",
+    "answer_2": "تعمل عكس JNZ",
+    "answer_3": "تقفز عند ZF=0",
+    "answer_4": "A+B",
+    "correct_ans": "تقفز عند ZF=1"
+  },
+  {
+    "title": "READY الطرف هو:",
+    "answer_1": "طرف دخل للمعطيات",
+    "answer_2": "طرف خرج للمعطيات",
+    "answer_3": "طرف دخل لإدخال المعالج بحالة الانتظار",
+    "answer_4": "طرف خرج لإدخال المعالج بحالة الانتظار",
+    "correct_ans": "طرف دخل لإدخال المعالج بحالة الانتظار"
+  },
+  {
+    "title": "طول ممر المعطيات في المعالج 8086 هو:",
+    "answer_1": "16",
+    "answer_2": "8",
+    "answer_3": "32",
+    "answer_4": "24",
+    "correct_ans": "16"
+  },
+  {
+    "title": "الممرات الرئيسية للمعالج هي:",
+    "answer_1": "عناوين",
+    "answer_2": "معطيات",
+    "answer_3": "تحكم",
+    "answer_4": "كل ما سبق صحيح",
+    "correct_ans": "كل ما سبق صحيح"
+  },
+  {
+    "title": "يحتاج المعالج للوصول إلى المسجلات:",
+    "answer_1": "0 دورة",
+    "answer_2": "1 دورة",
+    "answer_3": "2 دورة",
+    "answer_4": "3 دورة",
+    "correct_ans": "0 دورة"
+  },
+  {
+    "title": "8086 يستطيع عنونة ذاكرة بحجم:",
+    "answer_1": "8MB",
+    "answer_2": "4MB",
+    "answer_3": "2MB",
+    "answer_4": "1MB",
+    "correct_ans": "1MB"
+  },
+  {
+    "title": "معالج يملك 20 خط عنونة يستطيع عنونة:",
+    "answer_1": "1MB",
+    "answer_2": "2MB",
+    "answer_3": "4MB",
+    "answer_4": "8MB",
+    "correct_ans": "1MB"
+  },
+  {
+    "title": "أطول مقطع للذاكرة هو:",
+    "answer_1": "64KB",
+    "answer_2": "64MB",
+    "answer_3": "512KB",
+    "answer_4": "512MB",
+    "correct_ans": "64KB"
+  },
+  {
+    "title": "المعالج 8086 يعمل بتردد:",
+    "answer_1": "5MHz",
+    "answer_2": "10MHz",
+    "answer_3": "5GHz",
+    "answer_4": "10GHz",
+    "correct_ans": "5MHz"
+  },
+  {
+    "title": "عندما يكون RD في مستوى صفر:",
+    "answer_1": "تتم عملية القراءة",
+    "answer_2": "تتم عملية الكتابة",
+    "answer_3": "لا يتم تنفيذ شيء",
+    "answer_4": "ليس مما سبق",
+    "correct_ans": "تتم عملية القراءة"
+  },
+  {
+    "title": "تعليمة SAL AX,1 تكافئ:",
+    "answer_1": "الضرب بالـ 2 للأعداد بدون إشارة",
+    "answer_2": "الضرب بالـ 2 للأعداد ذات إشارة",
+    "answer_3": "القسمة على 2 للأعداد بدون إشارة",
+    "answer_4": "القسمة على 2 للأعداد ذات إشارة",
+    "correct_ans": "الضرب بالـ 2 للأعداد بدون إشارة"
+  },
+  {
+    "title": "يتم تمثيل أعداد النظام الست عشري بـ:",
+    "answer_1": "NIBBLE",
+    "answer_2": "BIT",
+    "answer_3": "BYTE",
+    "answer_4": "WORD",
+    "correct_ans": "NIBBLE"
+  },
+  {
+    "title": "يتم تخزين DOUBLE WORD في الذاكرة حيث تستهلك:",
+    "answer_1": "موقعين",
+    "answer_2": "موقع واحد",
+    "answer_3": "أربعة مواقع",
+    "answer_4": "أربعة مواقع متعاقبة",
+    "correct_ans": "أربعة مواقع متعاقبة"
+  },
+  {
+    "title": "التعليمة الصحيحة لدفع قيمة إلى المكدس:",
+    "answer_1": "PUSH AL,5H",
+    "answer_2": "PUSH AL",
+    "answer_3": "PUSH AX,10H",
+    "answer_4": "PUSH AX",
+    "correct_ans": "PUSH AX"
+  },
+  {
+    "title": "بعد CBW إذا كان AL=80H ما قيمة AX؟",
+    "answer_1": "FF80",
+    "answer_2": "FF",
+    "answer_3": "80",
+    "answer_4": "0080",
+    "correct_ans": "FF80"
+  },
+  {
+    "title": "تعليمة POPF:",
+    "answer_1": "تحمل قيم أعلام الحالة من المكدس",
+    "answer_2": "تغير محتوى مسجل الأعلام",
+    "answer_3": "عكس تعليمة PUSHF",
+    "answer_4": "كل ما سبق صحيح",
+    "correct_ans": "كل ما سبق صحيح"
+  },
+  {
+    "title": "طول المسجلات في المعالج 8086 هو:",
+    "answer_1": "16 BIT",
+    "answer_2": "8 BIT",
+    "answer_3": "32 BIT",
+    "answer_4": "24 BIT",
+    "correct_ans": "16 BIT"
+  }
+]

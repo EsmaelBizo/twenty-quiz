@@ -1,7 +1,7 @@
 :root {
     --main-padding: 20px;
     --main-color: #2196f3;
-    --main-green: #009688;
+    --main-green: #00960c;
     --main-transition: 0.3s;
     --main-radius: 10px;
 }
@@ -9,8 +9,8 @@
     box-sizing: border-box;
     user-select: none;
 }
-body {
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+body, input, textarea, select, button {
+    font-family: 'Almarai', sans-serif;
 }
 h1, h2, h3, h4, h5, p {
     margin: 0;
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, p {
     border: none;
     cursor: pointer;
     margin: 0;
-    background-color: var(--main-green);
+    background-color: #009688;
     color: rgb(255, 255, 255);
     font-size: 18px;
     width: 80%;
@@ -97,6 +97,11 @@ h1, h2, h3, h4, h5, p {
     box-shadow: 0 0 2px 3px #f3f3f3;
     border-radius: var(--main-radius);
 }
+@media(max-width: 767px) {
+    .info, .more-info {
+        font-size: 14px;
+    }
+}
 form {
     margin: 20px 0;
     box-shadow: 0 0 2px 3px #f3f3f3;
@@ -109,6 +114,11 @@ form {
 }
 .question h2 {
     margin-bottom: 20px;
+}
+@media(max-width: 767px) {
+    .question h2 {
+        font-size: 18px;
+    }
 }
 .question .answers {
     background-color: #f9f9f9;
@@ -134,11 +144,17 @@ form {
     transition: var(--main-transition);
     cursor: pointer;
 }
+@media(max-width: 767px) {
+    .question .answers .answer label {
+        padding: 12px 15px;
+    }
+}
 .question .answers .answer input:checked + label {
-    color: var(--main-color);
+    background-color: #31a1fd;
+    color: white;
 }
 .question .answers .answer input:not(:checked) + label:hover {
-    color: #436079;
+    background-color: #ebe9e9;
 }
 .question .answers .answer input.right + label {
     background-color: var(--main-green);
@@ -168,6 +184,7 @@ input[type="submit"]:focus {
 }
 .more-info .bullets {
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     gap: 6px;
 }
@@ -222,12 +239,11 @@ input[type="submit"]:focus {
 @keyframes apear {
     100% {
         opacity: 1;
-        padding: 40px;
+        padding: 30px;
     }
 }
 .finish .rank {
-    font-size: 65px;
-    padding-bottom: 10px;
+    font-size: 80px;
 }
 .finish .rank.passed {
     color: var(--main-green);

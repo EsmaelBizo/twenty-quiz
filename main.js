@@ -8,9 +8,11 @@ let timeLeft;
 let countdownAudio = document.querySelector('.countdown-audio');
 
 let qIndex = 0;
-let rAswers = 0;
+let rightAnswers = 0;
+let objRequest;
 
-addCats(['html', 'css', 'js']);
+addCats([['analysis2', 'تحليل 2'], ['analysis3', 'تحليل 3'], ['math_programming', 'برمجة رياضية'],
+    ['arabic', 'اللغة العربية'], ['microprocessor', 'معالج مصغر'], ['diagrams', 'مخططات']]);
 
 document.querySelector('.start').onclick = () => {
     document.querySelector('.slide-audio').play();
@@ -19,8 +21,8 @@ document.querySelector('.start').onclick = () => {
     let categorySpn = document.querySelector('.info .category span');
     ctgrInps.forEach((c) => {
         if (c.checked) {
-            catName = categorySpn.innerHTML = c.dataset.cat;
-            categorySpn.style.textTransform = 'upperCase';
+            catName = c.dataset.cat.split(',')[0];
+            categorySpn.innerHTML = c.dataset.cat.split(',')[1];
         }
     })
     getQuestions();
@@ -39,7 +41,7 @@ function addCats(cats) {
         label.appendChild(catInp);
             
         let dv = document.createElement('div');
-        dv.innerHTML = cats[i].toUpperCase();
+        dv.innerHTML = cats[i][1];
         label.appendChild(dv);
 
         document.querySelector('.ctgrs').appendChild(label);
@@ -51,36 +53,15 @@ function getQuestions() {
 
     myRequest.onreadystatechange = () => {
         if (myRequest.readyState === 4 && myRequest.status === 200) {
-            let objRequest = JSON.parse(myRequest.responseText);
+            objRequest = JSON.parse(myRequest.responseText);
             shuffle(objRequest);
-            objRequest = objRequest.slice(0, 14); // Number of questions
+            objRequest = objRequest.slice(0, 20); // Number Of Quistions
 
             qNum.innerHTML = objRequest.length;
             createBullets(objRequest.length);
 
             addData(objRequest[qIndex]);
             
-            subbut.addEventListener('click', (e) => {
-                clearInterval(timeLeft);
-                countdownAudio.pause();
-                countdownAudio.currentTime = 0;
-                e.preventDefault();
-                checkAns(objRequest[qIndex]);
-                subbut.style.display = 'none';
-                setTimeout(() => {
-                    qIndex++;
-                    if (qIndex < objRequest.length) {
-                        resetData();
-                        addData(objRequest[qIndex]);
-                        spansBullets[qIndex].className = 'on';
-                    } else {
-                        document.querySelector('form').remove();
-                        addResult(objRequest.length);
-                        settingTime(0);
-                    }
-                    subbut.style.display = 'block';
-                }, 1500)
-            })
         }
     }
     
@@ -98,27 +79,24 @@ function createBullets (num) {
 }
 
 function addData(obj) {
-    timer(10);
+    timer(5);
     document.querySelector('.question h2').append(obj.title);
-    let nums = [1, 2, 3, 4];
-    shuffle(nums);
-    for (let i = 0; i < 4; i++) {
+    for (let i = 1; i <= 4; i++) {
         let ans = document.createElement('div');
         ans.className = 'answer';
-
+        
         let inp = document.createElement('input');
         inp.setAttribute('type', 'radio');
         inp.setAttribute('name', 'answers');
-        inp.setAttribute('id', `answer_${nums[i]}`);
-        inp.dataset.answer = obj[`answer_${nums[i]}`];
-        if (i === 0) inp.checked = true;
+        inp.setAttribute('id', `answer_${i}`);
+        inp.dataset.answer = obj[`answer_${i}`];
         ans.appendChild(inp);
 
         let label = document.createElement('label');
-        label.htmlFor = `answer_${nums[i]}`;
-        label.append(obj[`answer_${nums[i]}`]);
+        label.htmlFor = `answer_${i}`;
+        label.append(obj[`answer_${i}`]);
         ans.appendChild(label);
-
+        
         answersCont.appendChild(ans);
     }
 }
@@ -128,14 +106,38 @@ function resetData() {
     answersCont.innerHTML = '';
 }
 
+subbut.addEventListener('click', (e) => {
+    clearInterval(timeLeft);
+    countdownAudio.pause();
+    countdownAudio.currentTime = 0;
+    e.preventDefault();
+    checkAns(objRequest[qIndex]);
+    subbut.style.display = 'none';
+    setTimeout(() => {
+        qIndex++;
+        if (qIndex < objRequest.length) {
+            resetData();
+            addData(objRequest[qIndex]);
+            spansBullets[qIndex].className = 'on';
+        } else {
+            document.querySelector('form').remove();
+            addResult(objRequest.length);
+            settingTime(0);
+        }
+        subbut.style.display = 'block';
+    }, 1500)
+})
+
 function checkAns(obj) {
+    let checked = false;
     document.getElementsByName('answers').forEach(ans => {
         if (ans.dataset.answer === obj.correct_ans) {
             ans.classList.add('right');
         }
         if (ans.checked) {
+            checked = true;
             if (ans.dataset.answer === obj.correct_ans) {
-                rAswers++;
+                rightAnswers++;
                 spansBullets[qIndex].className = 'right';
                 document.querySelector('.right-audio').play();
             } else {
@@ -145,14 +147,25 @@ function checkAns(obj) {
             }
         }
     });
+    if(!checked) {
+        document.getElementsByName('answers').forEach(ans => {
+            if (ans.dataset.answer === obj.correct_ans) {
+                ans.classList.add('right');
+            } else {
+                spansBullets[qIndex].className = 'wrong';
+                ans.classList.add('wrong');
+                document.querySelector('.wrong-audio').play();
+            }
+        })
+    }
 }
 
 function addResult(from) {
     document.querySelector('.finish').style.display = 'block';
     document.querySelector('.result').classList.add('apear');
-    document.querySelector('.finish .r-ans').innerHTML = rAswers;
+    document.querySelector('.finish .r-ans').innerHTML = rightAnswers;
     document.querySelector('.finish .all-ans').innerHTML = from;
-    let per = Math.ceil(rAswers * 100 / from);
+    let per = Math.ceil(rightAnswers * 100 / from);
     rank.innerHTML = `${per}%`;
     if (per >= 60) {
         rank.classList.add('passed');
@@ -164,14 +177,11 @@ function addResult(from) {
 }
 
 function shuffle(array) {
-    let current = array.length, random, temp;
-    while (current) {
-        random = Math.floor(Math.random() * array.length);
-        current--;
-        temp = array[current];
-        array[current] = array[random];
-        array[random] = temp;
-    }
+for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+}
+
 }
 
 function timer(sec) {
