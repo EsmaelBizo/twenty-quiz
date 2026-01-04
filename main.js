@@ -12,8 +12,7 @@ let rightAnswers = 0;
 let allQuestions = [];
 let questions = [];
 
-addCats([['algorithms_practical', 'عملي خوارزميات'], ['microprocessor_practical', 'عملي معالج مصغر'], ['computer_principles', 'مبادئ عمل الحاسوب'], ['programming1', 'برمجة 1'], ['analysis2', 'تحليل 2'], ['analysis3', 'تحليل 3'], ['math_programming', 'برمجة رياضية'],
-    ['arabic', 'اللغة العربية'], ['microprocessor', 'معالج مصغر'], ['diagrams', 'مخططات']]);
+addCats(['algorithms_practical', 'عملي خوارزميات'], ['microprocessor_practical', 'عملي معالج مصغر']);
 
 document.querySelector('.start').onclick = () => {
     document.querySelector('.slide-audio').play();
