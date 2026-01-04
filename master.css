@@ -223,6 +223,7 @@ input[type="submit"]:focus {
 .more-info .time {
     width: 150px;
     text-align: right;
+    font-weight: bold;
 }
 .finish {
     text-align: center;
@@ -255,6 +256,9 @@ input[type="submit"]:focus {
     color: var(--main-color);
 }
 .again {
+    margin-bottom: 10px;
+}
+.back, .again {
     display: block;
     border: none;
     text-decoration: none;
@@ -266,7 +270,8 @@ input[type="submit"]:focus {
     cursor: pointer;
     transition: var(--main-transition);
     width: 100%;
+    font-weight: bold;
 }
-.again:hover {
+.back:hover, .again:hover {
     background-color: #1e88e5;
 }

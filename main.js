@@ -9,9 +9,10 @@ let countdownAudio = document.querySelector('.countdown-audio');
 
 let qIndex = 0;
 let rightAnswers = 0;
-let objRequest;
+let allQuestions = [];
+let questions = [];
 
-addCats([['analysis2', 'تحليل 2'], ['analysis3', 'تحليل 3'], ['math_programming', 'برمجة رياضية'],
+addCats([['algorithms_practical', 'عملي خوارزميات'], ['microprocessor_practical', 'عملي معالج مصغر'], ['computer_principles', 'مبادئ عمل الحاسوب'], ['programming1', 'برمجة 1'], ['analysis2', 'تحليل 2'], ['analysis3', 'تحليل 3'], ['math_programming', 'برمجة رياضية'],
     ['arabic', 'اللغة العربية'], ['microprocessor', 'معالج مصغر'], ['diagrams', 'مخططات']]);
 
 document.querySelector('.start').onclick = () => {
@@ -49,24 +50,33 @@ function addCats(cats) {
 }
 
 function getQuestions() {
-    let myRequest = new XMLHttpRequest();
+    fetch(`JSON/${catName}_questions.json`)
+        .then(res => res.json())
+        .then(data => {
+            allQuestions = data;
 
-    myRequest.onreadystatechange = () => {
-        if (myRequest.readyState === 4 && myRequest.status === 200) {
-            objRequest = JSON.parse(myRequest.responseText);
-            shuffle(objRequest);
-            objRequest = objRequest.slice(0, 20); // Number Of Quistions
+            startNewQuiz();
+        });
+}
 
-            qNum.innerHTML = objRequest.length;
-            createBullets(objRequest.length);
+function startNewQuiz() {
+    shuffle(allQuestions);
+    questions = allQuestions.slice(0, 20); // عدد الأسئلة
 
-            addData(objRequest[qIndex]);
-            
-        }
-    }
-    
-    myRequest.open("GET", `JSON/${catName}_questions.json`, true);
-    myRequest.send();
+    qNum.innerHTML = questions.length;
+    document.querySelector('.bullets').innerHTML = '';
+    createBullets(questions.length);
+
+    qIndex = 0;
+    rightAnswers = 0;
+
+    document.querySelector('.question h2').innerHTML = '';
+    answersCont.innerHTML = '';
+
+    document.querySelector('form').style.display = 'block';
+    document.querySelector('.finish').style.display = 'none';
+
+    addData(questions[qIndex]);
 }
 
 function createBullets (num) {
@@ -79,7 +89,7 @@ function createBullets (num) {
 }
 
 function addData(obj) {
-    timer(5);
+    timer(20);
     document.querySelector('.question h2').append(obj.title);
     for (let i = 1; i <= 4; i++) {
         let ans = document.createElement('div');
@@ -106,27 +116,27 @@ function resetData() {
     answersCont.innerHTML = '';
 }
 
-subbut.addEventListener('click', (e) => {
+subbut.onclick = (e) => {
     clearInterval(timeLeft);
     countdownAudio.pause();
     countdownAudio.currentTime = 0;
     e.preventDefault();
-    checkAns(objRequest[qIndex]);
+    checkAns(questions[qIndex]);
     subbut.style.display = 'none';
     setTimeout(() => {
         qIndex++;
-        if (qIndex < objRequest.length) {
+        if (qIndex < questions.length) {
             resetData();
-            addData(objRequest[qIndex]);
+            addData(questions[qIndex]);
             spansBullets[qIndex].className = 'on';
         } else {
-            document.querySelector('form').remove();
-            addResult(objRequest.length);
+            document.querySelector('form').style.display = 'none';
+            addResult(questions.length);
             settingTime(0);
         }
         subbut.style.display = 'block';
     }, 1500)
-})
+}
 
 function checkAns(obj) {
     let checked = false;
@@ -201,3 +211,7 @@ function settingTime(sec) {
     document.querySelector('.sec').innerHTML = seconds > 9 ? seconds : `0${seconds}`;
     document.querySelector('.more-info .time').style.color = sec > 3 ? 'black' : 'rgb(182, 8, 8)';
 }
+
+document.querySelector('.again').onclick = () => {
+    startNewQuiz();
+};
