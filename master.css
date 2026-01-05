@@ -34,23 +34,25 @@ h1, h2, h3, h4, h5, p {
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--main-color);
-    transition: 0.6s;
+    transition: 0.6s ease;
 }
 .splash.hidden {
     opacity: 0;
-    left: 100%;
+    transform: translateX(100%);
+    pointer-events: none;
 }
 .splash h1 {
-    font-size: 200px;
+    font-size: 160px;
     font-weight: normal;
     color: var(--main-color);
     background-color: #E9BCB9;
     padding: 0 20px;
     border-radius: 8px;
+    transform: translateY(-15px);
 }
 @media (max-width: 767px) {
     .splash h1 {
-        font-size: 150px;
+        font-size: 120px;
     }
 }
 .app {
@@ -136,7 +138,7 @@ h1, h2, h3, h4, h5, p {
     justify-content: space-between;
     align-items: center;
     background-color: var(--alt-color);
-    padding: var(--main-padding);
+    padding: 15px;
     box-shadow: 0 0 2px 0px grey;
     border-radius: var(--main-radius);
 }
@@ -337,4 +339,15 @@ input[type="submit"]:focus {
 }
 .back:hover, .again:hover {
     background-color: #8f3143;
+}
+.footer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #A34054;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .footer {
+        font-size: 12px;
+    }
 }

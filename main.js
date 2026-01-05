@@ -14,7 +14,7 @@ let questions = [];
 
 setTimeout(() => {
     document.querySelector('.splash').classList.add('hidden');
-}, 1000)
+}, 700)
 
 addCats([['algorithms_practical', 'خوارزميات'], ['microprocessor_practical', 'معالج مصغر']]);
 
@@ -64,7 +64,7 @@ function getQuestions() {
 
 function startNewQuiz() {
     shuffle(allQuestions);
-    questions = allQuestions.slice(0, 2); // عدد الأسئلة
+    questions = allQuestions.slice(0, 20); // عدد الأسئلة
 
     qNum.innerHTML = questions.length;
     document.querySelector('.bullets').innerHTML = '';
@@ -76,6 +76,7 @@ function startNewQuiz() {
     document.querySelector('.question h2').innerHTML = '';
     answersCont.innerHTML = '';
 
+    document.querySelector('.more-info').style.display = 'flex';
     document.querySelector('form').style.display = 'block';
     document.querySelector('.finish').style.display = 'none';
 
@@ -178,6 +179,7 @@ function checkAns(obj) {
 }
 
 function addResult(from) {
+    document.querySelector('.more-info').style.display = 'none';
     document.querySelector('.finish').style.display = 'block';
     document.querySelector('.result').classList.add('apear');
     document.querySelector('.finish .r-ans').innerHTML = rightAnswers;
