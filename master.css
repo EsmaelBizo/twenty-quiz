@@ -257,7 +257,7 @@ input[type="submit"]:focus {
 }
 @keyframes on {
     100% {
-        background-color: #0075ff;
+        background-color: #A34054;
     }
 }
 @keyframes right {

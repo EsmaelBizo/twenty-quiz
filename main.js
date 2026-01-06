@@ -1,4 +1,4 @@
-let catName;
+let catId;
 let qNum = document.querySelector('.info .quiz-num span');
 let answersCont = document.querySelector('.answers');
 let subbut = document.querySelector('input[type="submit"]');
@@ -16,7 +16,10 @@ setTimeout(() => {
     document.querySelector('.splash').classList.add('hidden');
 }, 700)
 
-addCats([['algorithms_practical', 'خوارزميات'], ['microprocessor_practical', 'معالج مصغر']]);
+addCats([
+    {id: 'algorithms_practical', name: 'خوارزميات'},
+    {id: 'microprocessor_practical', name: 'معالج مصغر'}, 
+]);
 
 document.querySelector('.start').onclick = () => {
     document.querySelector('.slide-audio').play();
@@ -25,8 +28,8 @@ document.querySelector('.start').onclick = () => {
     let categorySpn = document.querySelector('.info .category span');
     ctgrInps.forEach((c) => {
         if (c.checked) {
-            catName = c.dataset.cat.split(',')[0];
-            categorySpn.innerHTML = c.dataset.cat.split(',')[1];
+            catId = c.id;
+            categorySpn.innerHTML = c.dataset.name;
         }
     })
     getQuestions();
@@ -40,12 +43,13 @@ function addCats(cats) {
         let catInp = document.createElement('input');
         catInp.setAttribute('type', 'radio');
         catInp.setAttribute('name', 'ctgr');
-        catInp.dataset.cat = cats[i];
+        catInp.id = cats[i].id;
+        catInp.dataset.name = cats[i].name;
         if (i === 0) catInp.checked = true;
         label.appendChild(catInp);
             
         let dv = document.createElement('div');
-        dv.innerHTML = cats[i][1];
+        dv.innerHTML = cats[i].name;
         label.appendChild(dv);
 
         document.querySelector('.ctgrs').appendChild(label);
@@ -53,7 +57,7 @@ function addCats(cats) {
 }
 
 function getQuestions() {
-    fetch(`JSON/${catName}_questions.json`)
+    fetch(`JSON/${catId}_questions.json`)
         .then(res => res.json())
         .then(data => {
             allQuestions = data;
@@ -154,28 +158,26 @@ function checkAns(obj) {
         }
         if (ans.checked) {
             checked = true;
-            if (ans.dataset.answer === obj.correct_ans) {
-                rightAnswers++;
-                spansBullets[qIndex].className = 'right';
-                document.querySelector('.right-audio').play();
-            } else {
-                spansBullets[qIndex].className = 'wrong';
-                ans.classList.add('wrong');
-                document.querySelector('.wrong-audio').play();
-            }
+            ans.dataset.answer === obj.correct_ans ? rightAnswer() : wrongAnswer(ans);
         }
     });
     if(!checked) {
-        document.getElementsByName('answers').forEach(ans => {
-            if (ans.dataset.answer === obj.correct_ans) {
-                ans.classList.add('right');
-            } else {
-                spansBullets[qIndex].className = 'wrong';
-                ans.classList.add('wrong');
-                document.querySelector('.wrong-audio').play();
-            }
-        })
+        document.getElementsByName('answers').forEach(ans =>
+        ans.dataset.answer === obj.correct_ans ? ans.classList.add('right') : wrongAnswer(ans)
+        )
     }
+}
+
+function rightAnswer() {
+    rightAnswers++;
+    spansBullets[qIndex].className = 'right';
+    document.querySelector('.right-audio').play();
+}
+
+function wrongAnswer(ans) {
+    spansBullets[qIndex].className = 'wrong';
+    ans.classList.add('wrong');
+    document.querySelector('.wrong-audio').play();
 }
 
 function addResult(from) {
