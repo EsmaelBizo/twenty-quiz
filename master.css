@@ -166,6 +166,8 @@ form {
 }
 .question h2 pre {
     direction: ltr;
+    font-family: 'Consolas', monospace;
+    font-size: 18px;
 }
 @media(max-width: 767px) {
     .question h2 {
