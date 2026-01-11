@@ -259,6 +259,12 @@ input[type="submit"]:hover {
 input[type="submit"]:focus {
     outline: none;
 }
+.confirm {
+    background-color: var(--main-color);
+}
+.next {
+    display: none;
+}
 .more-info .bullets {
     display: flex;
     flex-direction: row-reverse;

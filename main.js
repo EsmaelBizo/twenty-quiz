@@ -1,7 +1,8 @@
 let catId;
 let qNum = document.querySelector('.info .quiz-num span');
 let answersCont = document.querySelector('.answers');
-let subbut = document.querySelector('input[type="submit"]');
+let conf = document.querySelector('input.confirm');
+let next = document.querySelector('input.next');
 let timeLeft;
 let spansBullets;
 let rank = document.querySelector('.finish .rank');
@@ -130,23 +131,27 @@ function resetData() {
     answersCont.innerHTML = '';
 }
 
-subbut.onclick = (e) => {
+conf.onclick = (e) => {
     countdownAudio.pause();
     countdownAudio.currentTime = 0;
     e.preventDefault();
-    subbut.style.display = 'none';
+    conf.style.display = 'none';
+    next.style.display = 'inline-block';
     checkAns(questions[qIndex]);
-    setTimeout(() => {
-        qIndex++;
-        if (qIndex < questions.length) {
-            resetData();
-            addData(questions[qIndex]);
-            spansBullets[qIndex].className = 'on';
-        } else {
-            endQuiz();
-        }
-        subbut.style.display = 'block';
-    }, 1500)
+}
+
+next.onclick = (e) => {
+    e.preventDefault();
+    next.style.display = 'none';
+    qIndex++;
+    if (qIndex < questions.length) {
+        resetData();
+        addData(questions[qIndex]);
+        spansBullets[qIndex].className = 'on';
+    } else {
+        endQuiz();
+    }
+    conf.style.display = 'block';
 }
 
 function checkAns(obj) {
