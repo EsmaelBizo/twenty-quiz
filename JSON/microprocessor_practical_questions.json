@@ -224,7 +224,7 @@
     "correct_ans": "[SI + DI]"
   },
   {
-    "title": "أي تعليمة تُستخدم لضبط علم الاتجاه CF إلى 1؟",
+    "title": "أي تعليمة تُستخدم لضبط علم CF إلى 1؟",
     "answer_1": "CLD",
     "answer_2": "STD",
     "answer_3": "CBW",
@@ -232,7 +232,7 @@
     "correct_ans": "STC"
   },
   {
-    "title": "أي تعليمة تُستخدم لتصفير علم الاتجاه CF؟",
+    "title": "أي تعليمة تُستخدم لتصفير علم CF؟",
     "answer_1": "STD",
     "answer_2": "CLC",
     "answer_3": "CLD",
@@ -429,6 +429,54 @@
     "answer_2": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
     "answer_3": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJNS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
     "answer_4": "<pre>again mov AL, [BX]\nand AL,01ℎ\nJNS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
-    "correct_ansة": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>"
+    "correct_ans": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>"
+  },
+  {
+    "title": " في أي كتلة تعليمات يكون الخزان  مسؤول عن تخزين عدد الأعداد الموجبة:",
+    "answer_1": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJNS next\nInc DL\nnext: Inc BX\nLoop again</pre>",
+    "answer_2": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
+    "answer_3": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJNS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
+    "answer_4": "<pre>again mov AL, [BX]\nand AL,01ℎ\nJNS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
+    "correct_ans": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>"
+  },
+  {
+    "title": "إن التعليمة SHL d, CL تقوم ب:",
+    "answer_1": "إزاحة d بمقدار CL نحو اليسار",
+    "answer_2": "إزاحة d بمقدار CL نحو اليمين",
+    "answer_3": "إزاحة CL بمقدار d نحو اليسار",
+    "answer_4": "إزاحة CL بمقدار d نحو اليمين",
+    "correct_ans": "إزاحة d بمقدار CL نحو اليسار"
+  },
+  {
+    "title": "تؤثر تعليمات الإزاحة على العلم:",
+    "answer_1": "OF",
+    "answer_2": "ZF",
+    "answer_3": "PF",
+    "answer_4": "SF",
+    "correct_ans": "OF"
+  },
+  {
+    "title": "<pre>mov SI, [1004ℎ]\nmov AX, [1006ℎ]\nmov ES, AX</pre>التعليمات السابقة تكافئ عمل:",
+    "answer_1": "LDS SI,[1004ℎ]",
+    "answer_2": "LES SI,[1004ℎ]",
+    "answer_3": "LDS SI,[1006ℎ]",
+    "answer_4": "LES SI,[1006ℎ]",
+    "correct_ans": "LDS SI,[1004ℎ]"
+  },
+  {
+    "title": "أي مما يلي ينطبق على السلسلة الهدف؟",
+    "answer_1": "تتعامل مع المقطع DS ويُؤشر على الإزاحة فيها SI",
+    "answer_2": "تتعامل مع المقطع SI ويُؤشر على الإزاحة فيها DS",
+    "answer_3": "تتعامل مع المقطع ES ويُؤشر على الإزاحة فيها DI",
+    "answer_4": "تتعامل مع المقطع DI ويُؤشر على الإزاحة فيها ES",
+    "correct_ans": "تتعامل مع المقطع ES ويُؤشر على الإزاحة فيها DI"
+  },
+  {
+    "title": "أي مما يلي ينطبق على السلسلة المصدر؟",
+    "answer_1": "تتعامل مع المقطع DS ويُؤشر على الإزاحة فيها SI",
+    "answer_2": "تتعامل مع المقطع SI ويُؤشر على الإزاحة فيها DS",
+    "answer_3": "تتعامل مع المقطع ES ويُؤشر على الإزاحة فيها DI",
+    "answer_4": "تتعامل مع المقطع DI ويُؤشر على الإزاحة فيها ES",
+    "correct_ans": "تتعامل مع المقطع DS ويُؤشر على الإزاحة فيها SI"
   }
 ]
