@@ -192,12 +192,12 @@
     "correct_ans": "mov ES,AX"
   },
   {
-    "title": "لدينا \n𝐴𝑋 = 4𝐹3𝐷ℎ, 𝐵𝑋 = 𝐹𝐷81ℎ, 𝐶𝐹 = 1\n ، بعد تنفيذ التعليمة ADC BX,AX يكون:",
-    "answer_1": "𝐴𝑋 = 4𝐶𝐵𝐹ℎ",
-    "answer_2": "𝐵𝑋 = 4𝐶𝐵𝐹ℎ",
-    "answer_3": "𝐴𝑋 = 4𝐶𝐵𝐸ℎ",
-    "answer_4": "𝐵𝑋 = 4𝐶𝐵𝐸ℎ",
-    "correct_ans": "𝐵𝑋 = 4𝐶𝐵𝐹ℎ"
+    "title": "لدينا \nAX = 4F3Dℎ, BX = FD81ℎ, CF = 1\n ، بعد تنفيذ التعليمة ADC BX,AX يكون:",
+    "answer_1": "AX = 4CBFℎ",
+    "answer_2": "BX = 4CBFℎ",
+    "answer_3": "AX = 4CBEℎ",
+    "answer_4": "BX = 4CBEℎ",
+    "correct_ans": "BX = 4CBFℎ"
   },
   {
     "title": "المقطع الافتراضي الذي يتعامل مع المعالج:",
@@ -304,7 +304,7 @@
     "correct_ans": "CX"
   },
   {
-    "title": "<pre>𝑚𝑜𝑣 𝐴𝑋 , 2000ℎ\n𝑚𝑜𝑣 𝐷𝑆, 𝐴𝑋\n𝑚𝑜𝑣 𝐷𝐿 , 00ℎ\n𝑚𝑜𝑣 𝐶𝑋 , [20ℎ]\n𝑚𝑜𝑣 𝐶𝐻 , 00ℎ\n𝑚𝑜𝑣 𝐵𝑋 , 200ℎ\n𝑎𝑔𝑎𝑖𝑛: 𝑎𝑑𝑑 𝐷𝐿 , [𝐵𝑋]\n𝐼𝑛𝑐 𝐵𝑋\n𝐿𝑜𝑜𝑝 𝑎𝑔𝑎𝑖𝑛\n𝑚𝑜𝑣 [400ℎ], 𝐷𝐿\nℎ𝑙𝑡\n</pre>وفق الكود السابق فإن عدد الأعداد المراد جمعها مخزن في العنوان:",
+    "title": "<pre>mov AX , 2000ℎ\nmov DS, AX\nmov DL , 00ℎ\nmov CX , [20ℎ]\nmov CH , 00ℎ\nmov BX , 200ℎ\nagain: add DL , [BX]\n𝐼𝑛𝑐 BX\nLoop again\nmov [400ℎ], DL\nhlt\n</pre>وفق الكود السابق فإن عدد الأعداد المراد جمعها مخزن في العنوان:",
     "answer_1": "20020ℎ بطول 1 بايت",
     "answer_2": "20200ℎ بطول 1 بايت",
     "answer_3": "20020ℎ بطول 2 بايت",
@@ -312,12 +312,12 @@
     "correct_ans": "20020ℎ بطول 1 بايت"
   },
   {
-    "title": "<pre>𝑚𝑜𝑣 𝐴𝑋 , 2000ℎ\n𝑚𝑜𝑣 𝐷𝑆, 𝐴𝑋\n𝑚𝑜𝑣 𝐷𝐿 , 00ℎ\n____Here____\n𝑚𝑜𝑣 𝐵𝑋 , 100ℎ\n𝑎𝑔𝑎𝑖𝑛: 𝑎𝑑𝑑 𝐷𝐿 , [𝐵𝑋]\n𝐼𝑛𝑐 𝐵𝑋\n𝐿𝑜𝑜𝑝 𝑎𝑔𝑎𝑖𝑛\n𝑚𝑜𝑣 [400ℎ], 𝐷𝐿\nℎ𝑙𝑡\n</pre> ما هي التعليمات الواجب وضعها في المكان Here لتهيئة العداد . علماً أن عدد الأعداد مخزن في العنوان 20010ℎ وهو بطول 1 بايت",
-    "answer_1": "<pre dir='ltr'>𝑚𝑜𝑣 𝐶𝑋 , [10ℎ]\n𝑚𝑜𝑣 𝐶𝐻 , 00ℎ</pre>",
-    "answer_2": "<pre dir='ltr'>𝑚𝑜𝑣 𝐶𝑋 , [10ℎ]\n𝑚𝑜𝑣 𝐶𝑋 , 00ℎ</pre>",
-    "answer_3": "<pre dir='ltr'>𝑚𝑜𝑣 𝐶𝑋 , 10ℎ\n𝑚𝑜𝑣 𝐶𝐿 , 00ℎ</pre>",
-    "answer_4": "<pre dir='ltr'>𝑚𝑜𝑣 𝐶𝑋 , [10ℎ]\n𝑚𝑜𝑣 𝐶𝐻 , [00ℎ]</pre>",
-    "correct_ans": "<pre dir='ltr'>𝑚𝑜𝑣 𝐶𝑋 , [10ℎ]\n𝑚𝑜𝑣 𝐶𝐻 , 00ℎ</pre>"
+    "title": "<pre>mov AX , 2000ℎ\nmov DS, AX\nmov DL , 00ℎ\n____Here____\nmov BX , 100ℎ\nagain: add DL , [BX]\n𝐼𝑛𝑐 BX\nLoop again\nmov [400ℎ], DL\nhlt\n</pre> ما هي التعليمات الواجب وضعها في المكان Here لتهيئة العداد . علماً أن عدد الأعداد مخزن في العنوان 20010ℎ وهو بطول 1 بايت",
+    "answer_1": "<pre dir='ltr'>mov CX , [10ℎ]\nmov CH , 00ℎ</pre>",
+    "answer_2": "<pre dir='ltr'>mov CX , [10ℎ]\nmov CX , 00ℎ</pre>",
+    "answer_3": "<pre dir='ltr'>mov CX , 10ℎ\nmov CL , 00ℎ</pre>",
+    "answer_4": "<pre dir='ltr'>mov CX , [10ℎ]\nmov CH , [00ℎ]</pre>",
+    "correct_ans": "<pre dir='ltr'>mov CX , [10ℎ]\nmov CH , 00ℎ</pre>"
   },
   {
     "title": "على أي أعلام من أعلام الحالة تؤثر تعليمة cmp : ",
