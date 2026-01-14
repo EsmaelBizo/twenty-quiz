@@ -19,7 +19,7 @@ setTimeout(() => {
 
 addCats([
     {id: 'algorithms_practical', name: 'خوارزميات 2'},
-    // {id: 'microprocessor_practical', name: 'معالج مصغر'},
+    {id: 'microprocessor_practical', name: 'معالج مصغر'},
     // {id: 'computer_graphics_practical', name: 'رسوميات حاسوبية'},
     // {id: 'graph_theory_practical', name: 'نظرية المخططات'}
 ]);
@@ -118,7 +118,7 @@ function addData(obj) {
 
         let label = document.createElement('label');
         label.htmlFor = `answer_${shf[i]}`;
-        label.append(obj[`answer_${shf[i]}`]);
+        label.innerHTML = obj[`answer_${shf[i]}`];
         ans.appendChild(label);
         
         answersCont.appendChild(ans);

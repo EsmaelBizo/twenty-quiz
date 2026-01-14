@@ -164,7 +164,7 @@ form {
 .question h2 {
     margin-bottom: 20px;
 }
-.question pre {
+.question h2 pre {
     direction: ltr;
     font-family: 'Consolas', monospace;
     font-size: 18px;
@@ -178,14 +178,14 @@ form {
     line-height: 1.6;
     -webkit-overflow-scrolling: touch;
 }
-.question pre::-webkit-scrollbar {
+.question h2 pre::-webkit-scrollbar {
     height: 10px;
 }
-.question pre::-webkit-scrollbar-thumb {
+.question h2 pre::-webkit-scrollbar-thumb {
     background: #999;
     border-radius: 6px;
 }
-.question pre::-webkit-scrollbar-track {
+.question h2 pre::-webkit-scrollbar-track {
     background: #e0e0e0;
 }
 @media(max-width: 767px) {
