@@ -398,5 +398,37 @@
     "answer_3": "<pre dir='ltr'>XOR AX, FFFFℎ</pre>",
     "answer_4": "<pre dir='ltr'>XOR AX, 0000ℎ</pre>",
     "correct_ans": "<pre dir='ltr'>and AX,0000ℎ</pre>"
+  },
+  {
+    "title": "لمعرفة فيما إذا كان عدد زوجي أو فردي نقوم ب:",
+    "answer_1": "استخدام القناع 80ℎ",
+    "answer_2": "استخدام القناع 10000000",
+    "answer_3": "فحص خانة الإشارة الأكثر أهمية",
+    "answer_4": "فحص خانة الإشارة الأقل أهمية",
+    "correct_ans": "فحص خانة الإشارة الأقل أهمية"
+  },
+  {
+    "title": "لمعرفة فيما إذا كان التابع سالب أو موجب نقوم باستخدام القناع:",
+    "answer_1": "and AL, 80ℎ",
+    "answer_2": "or AL, 80ℎ",
+    "answer_3": "or AL, 01ℎ",
+    "answer_4": "and AL, 01ℎ",
+    "correct_ans": "and AL, 01ℎ"
+  },
+  {
+    "title": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJNS next\nInc DL\nnext: Inc BX\nLoop again</pre>الخزان DL في كتلة التعليمات السابقة مسؤول عن:",
+    "answer_1": "تخزين عدد الأعداد الموجبة",
+    "answer_2": "تخزين عدد الأعداد السالبة",
+    "answer_3":"تخزين عدد الأعداد الزوجية",
+    "answer_4": "تخزين عدد الأعداد الفردية",
+    "correct_ans": "تخزين عدد الأعداد الموجبة"
+  },
+  {
+    "title": " في أي كتلة تعليمات يكون الخزان DL مسؤول عن تخزين عدد الأعداد الموجبة:",
+    "answer_1": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJNS next\nInc DL\nnext: Inc BX\nLoop again</pre>",
+    "answer_2": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
+    "answer_3": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJNS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
+    "answer_4": "<pre>again mov AL, [BX]\nand AL,01ℎ\nJNS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>",
+    "correct_ansة": "<pre>again mov AL, [BX]\nand AL,80ℎ\nJS any\njmp next\nany: Inc DL\nnext: Inc BX\nLoop again</pre>"
   }
 ]
