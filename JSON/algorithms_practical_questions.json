@@ -416,14 +416,6 @@
     "correct_ans": "<span dir='ltr'>14,13,12,8,10</span>"
   },
   {
-    "title": "ما هو شكل المصفوفة بعد تنفيذ عمليتي حذف متتاليتين على Binary Max-Heap ممثل بالمصفوفة:\n<pre>30, 20, 15, 10, 8, 12, 6</pre>",
-    "answer_1": "<span dir='ltr'>20,10,15,6,8</span>",
-    "answer_2": "<span dir='ltr'>20,15,12,10,8</span>",
-    "answer_3": "<span dir='ltr'>20,15,10,8,6</span>",
-    "answer_4": "<span dir='ltr'>20,15,10,6,8</span>",
-    "correct_ans": "<span dir='ltr'>20,15,10,8,6</span>"
-  },
-  {
     "title": "لدينا المصفوفة التالية:\n<pre>⟨89, 19, 50, 17, 12, 15, 2, 5, 7, 11, 6, 9, 100⟩</pre>\nما هو أقل عدد من عمليات التبديل اللازمة لتحويلها إلى Max-Heap؟",
     "answer_1": "4",
     "answer_2": "5",
@@ -438,6 +430,14 @@
     "answer_3": "4",
     "answer_4": "5",
     "correct_ans": "2"
+  },
+  {
+    "title": "بعد إدخال المصفوفة التالية إلى شجرة ثنائية<pre>[7, 2, 9, 3, 4, 10, 12, 15, 13]</pre>أثناء تطبيق خوارزمية Heap Sort على المصفوفة السابقة وعندما تكون قيمة i=6 تكون قيمة value, ivalue :",
+    "answer_1": "value=9, ivalue=7",
+    "answer_2": "value=7, ivalue=9",
+    "answer_3": "value=9, ivalue=10",
+    "answer_4": "value=10, ivalue=9",
+    "correct_ans": "value=7, ivalue=9"
   },
   {
     "title": "يعطى العبور Postorder لشجرة ما بالشكل : <pre>3, 5, 7, 9, 4, 17, 16, 20, 18, 15, 14</pre> ما هو الجذر الرئيسي في الشجرة السابقة ؟",
@@ -478,5 +478,29 @@
     "answer_3": "i < 2 * n",
     "answer_4": "i <= 2 * n",
     "correct_ans": "i < 2 * n - 1"
+  },
+  {
+    "title": "إن الحالة الأسوأ لتعقيد خوارزمية Heap Sort هو :",
+    "answer_1": "O(nlog(n))",
+    "answer_2": "O(n)",
+    "answer_3": "O(log(n))",
+    "answer_4": "O(log(n)/n)",
+    "correct_ans": "O(nlog(n))"
+  },
+  {
+    "title": "في خوارزمية Quick Sort عند تمرير المصفوفة التالية<pre>1, 12, 5, 26, 7, 14, 3, 7, 2</pre>إلى التابع partition لأول مرة فإنه يعيد القيمة:",
+    "answer_1": "6",
+    "answer_2": "5",
+    "answer_3": "3",
+    "answer_4": "2",
+    "correct_ans": "5"
+  },
+  {
+    "title": "في خوارزمية Quick Sort عند تمرير المصفوفة التالية<pre>1, 12, 5, 26, 7, 14, 3, 7, 2</pre>إلى التابع partition للمرة الثالثة فإنه يعيد القيمة:",
+    "answer_1": "6",
+    "answer_2": "5",
+    "answer_3": "3",
+    "answer_4": "2",
+    "correct_ans": "2"
   }
 ]
